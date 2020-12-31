@@ -23,7 +23,6 @@ function toggleDarkLightMode(mode) {
     toggleIcon.children[0].textContent = mode === "dark"  ? 'Dark Mode' : 'Light Mode';
     mode === "dark" ? toggleIcon.children[1].classList.replace("fa-sun", "fa-moon")
     : toggleIcon.children[1].classList.replace("fa-moon", "fa-sun");
-    // mode === "dark" ? imageMode("dark") : mageMode("light")
 }
     
 
@@ -44,7 +43,7 @@ function switchTheme(event) {
 toggleSwitch.addEventListener("change", switchTheme);
 
 // Check Local Storage for Theme
-const currentTheme = localStorage.getItem("theme");
+// const currentTheme = localStorage.getItem("theme");
 // console.log(currentTheme)
 // if (currentTheme) {
 //     document.documentElement.setAttribute("data-theme", currentTheme);
