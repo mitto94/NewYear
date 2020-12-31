@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Kaushan+Script&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 
 :root {
   --primary-color: rgb(255, 92, 92);
@@ -30,9 +33,9 @@ body {
   margin: 0;
   color: var(--on-background);
   background-color: var(--background);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239ddfdc' fill-opacity='0.22'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+  /* background-image: background-color: #DFDBE5; */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.12'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-
 section {
   min-height: 100vh;
   display: flex;
@@ -42,7 +45,7 @@ section {
 }
 
 h1 {
-  font-family: Kaushan Script, sans-serif;
+  font-family: "Stylish", "cursive", serif;
   font-size: 100px;
   margin-bottom: 0;
 }
@@ -57,11 +60,12 @@ h2 {
 nav {
   z-index: 10;
   position: fixed;
-  font-family: Oswald, sans-serif;
-  font-size: 24px;
+  font-family: "Gamja Flower", "cursive", serif;
+  font-size: 28px;
   letter-spacing: 3px;
   padding: 25px;
-  width: 100vw;
+  padding-right: 0%;
+  width: 65vw;
   background: rgb(255 255 255 / 50%);
 }
 
@@ -87,6 +91,7 @@ a:focus {
 /* About Section */
 .about-container {
   display: flex;
+  justify-content: center;
 }
 
 .image-container {
@@ -94,7 +99,7 @@ a:focus {
   border-radius: 10px;
   padding: 10px 20px;
   margin-right: 25px;
-  width: auto;
+  width: 100%;
   background: var(--background);
   box-shadow: var(--box-shadow);
 }
@@ -157,17 +162,22 @@ button:hover:not(.outline) {
 }
 
 .text-box {
-  width: 40%;
+  width: 60%;
   text-align: justify;
-  background: rgb(0 0 0 / 50%);
+  background: rgba(0, 0, 0, 0.5);
   color: var(--on-primary);
   border-radius: 10px;
   padding: 30px;
+  font-family: "Stylish", "cursive", serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  line-height: 40px;
 }
+
 
 p {
   margin: 0;
-  line-height: 25px;
+  line-height: 40px;
 }
 
 /* Contact Section */
@@ -186,9 +196,9 @@ p {
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
-  z-index: 100;
+  /* z-index: 100; */
   position: fixed;
-  right: 25px;
+  right: 35px;
   top: 30px;
 }
 
@@ -256,4 +266,66 @@ input:checked + .slider::before {
 .fas {
   font-size: 30px;
   margin-right: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 680px) {
+  .text-box {
+    width: 70%;
+    text-align: justify;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--on-primary);
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 16px;
+    font-family: "Stylish", "cursive", serif;
+    letter-spacing: 3px;
+  }
+  nav {
+    z-index: 10;
+    position: fixed;
+    font-family: "Gamja Flower", "cursive", serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 25px;
+    padding-right: 0%;
+    width: 40vw;
+    background: rgb(255 255 255 / 50%);
+  }
+  h1 {
+    font-family: "Stylish", "cursive", serif;
+    font-size: 45px;
+    margin-bottom: 0;
+  }
+  a {
+    margin-right: 5px;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+  }
+    /* Dark Mode Toggle */
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    /* z-index: 100; */
+    position: fixed;
+    right: 15px;
+    top: 30px;
+  }
+
+  .theme-switch-wrapper span {
+    margin-right: 5px;
+    font-size: 0.8rem;
+  }
+
+  .toggle-text {
+    position: relative;
+    top: -4px;
+    right: 5px;
+    color: var(--on-background);
+  }
+  p {
+    margin: 0;
+    line-height: 20px;
+  }
 }

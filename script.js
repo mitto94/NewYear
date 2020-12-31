@@ -4,8 +4,7 @@ const toggleIcon = document.getElementById("toggle-icon")
 const image1 = document.getElementById("image1")
 const image2 = document.getElementById("image2")
 const image3 = document.getElementById("image3")
-const textBox = document.getElementById("text-box")
-
+const textBox = document.querySelectorAll(".text-box")
 // Dark or Light Images
 function imageMode(color) {
     image1.src = `img/undraw_proud_coder_${color}.svg`;
@@ -17,7 +16,10 @@ function imageMode(color) {
 
 function toggleDarkLightMode(mode) {
     nav.style.backgroundColor = mode === "dark" ? `rgb(0 0 0 / 50%)` : `rgb(255 255 255 / 50%)`;
-    textBox.style.backgroundColor = mode === "dark" ? `rgb(255 255 255 / 50%)` : `rgb(0 0 0 / 50%)`;
+    textBox.forEach(element => {
+        element.style.backgroundColor = mode === "dark" ? `rgba(216, 187, 255, 0.9)` : `rgb(0 0 0 / 50%)`;
+
+    });
     toggleIcon.children[0].textContent = mode === "dark"  ? 'Dark Mode' : 'Light Mode';
     mode === "dark" ? toggleIcon.children[1].classList.replace("fa-sun", "fa-moon")
     : toggleIcon.children[1].classList.replace("fa-moon", "fa-sun");
