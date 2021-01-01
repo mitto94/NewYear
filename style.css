@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 :root {
   --primary-color: rgb(255, 92, 92);
@@ -54,6 +55,8 @@ h2 {
   color: var(--on-background-alt);
   font-size: 32px;
   font-weight: normal;
+  font-family: "Gamja Flower", "cursive", serif;
+
 }
 
 /* Navigation */
@@ -168,7 +171,9 @@ button:hover:not(.outline) {
   color: var(--on-primary);
   border-radius: 10px;
   padding: 30px;
-  font-family: "Stylish", "cursive", serif;
+  font-family: "Noto Sans KR", "cursive", serif;
+  /* font-family: "Stylish", "cursive", serif; */
+
   font-size: 22px;
   letter-spacing: 2px;
   line-height: 40px;
@@ -276,19 +281,20 @@ input:checked + .slider::before {
     color: var(--on-primary);
     border-radius: 10px;
     padding: 30px;
-    font-size: 16px;
-    font-family: "Stylish", "cursive", serif;
-    letter-spacing: 3px;
+    font-size: 15px;
+    font-family: "Noto Sans KR", "cursive", serif;
+    letter-spacing: 2px;
   }
   nav {
     z-index: 10;
     position: fixed;
     font-family: "Gamja Flower", "cursive", serif;
     font-size: 18px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
+    margin-top: 12px;
     padding: 25px;
     padding-right: 0%;
-    width: 40vw;
+    width: 45vw;
     background: rgb(255 255 255 / 50%);
   }
   h1 {
@@ -326,6 +332,6 @@ input:checked + .slider::before {
   }
   p {
     margin: 0;
-    line-height: 20px;
+    line-height: 25px;
   }
 }
